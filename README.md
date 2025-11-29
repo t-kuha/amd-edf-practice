@@ -1,8 +1,26 @@
 # amd-edf-practice
 Practice for AMD EDF (Embedded Design Framework)
 
-- version: 
+- version: 2025.2
 - target: Zynq MPSoC
+- build environment: Ubuntu 24.04 (x86_64)
+
+## how to
+
+```shell
+$ mkdir -p yocto/edf
+$ pushd yocto/edf
+$ repo init -u https://github.com/Xilinx/yocto-manifests.git -b rel-v2025.2 -m default-edf.xml
+$ repo sync
+
+$ source edf-init-build-env
+
+# build disk image
+$ MACHINE=amd-cortexa53-mali-common bitbake edf-linux-disk-image
+
+# build BOOT.bin
+$ MACHINE=zynqmp-zcu104-sdt-full bitbake xilinx-bootbin
+```
 
 ***
 
