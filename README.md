@@ -7,6 +7,15 @@ Practice for AMD EDF (Embedded Design Framework)
 
 ## how to
 
+### generate SDT source
+
+```shell
+# run Vivado/Vitis tool setting in advance
+$ sdtgen sdt.tcl
+```
+
+### build micro SD image
+
 ```shell
 $ ./initial-setup.sh
 
