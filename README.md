@@ -8,7 +8,7 @@ Practice for AMD EDF (Embedded Design Framework)
 ## how to
 
 ```shell
-$ . ./initial-setup.sh
+$ ./initial-setup.sh
 
 $ source edf-init-build-env
 
