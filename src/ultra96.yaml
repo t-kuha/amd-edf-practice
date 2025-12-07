@@ -1,0 +1,26 @@
+args:
+    - --hw-description ../../../hw_project_sdt/
+    - --machine-name ultra96
+    - -l conf/local.conf
+
+kconfig:
+
+machine:
+    pre:
+    post:
+        QB_MEM:
+            op: '='
+            val: "-m 2G"
+        QEMU_HW_DTB_PS:
+            op: '='
+            val: "${QEMU_HW_DTB_PATH}/board-zynqmp-ultra96.dtb"
+        QEMU_HW_DTB_PMU:
+            op: '='
+            val: "${QEMU_HW_DTB_PATH}/zynqmp-pmu.dtb"
+        ENABLE_XEN_DTSI:
+            comment: "Temporarily enable XEN and XEN QEMU DTSI to system.dtb"
+            op: '='
+            val: "1"
+        ENABLE_XEN_QEMU_DTSI:
+            op: '='
+            val: "1"
