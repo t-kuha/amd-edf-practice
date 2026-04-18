@@ -1,6 +1,6 @@
 args:
     - --hw-description ../../../hw_project_sdt/
-    - --machine-name ultra96
+    - --machine-name ultra96v1
     - -l conf/local.conf
 
 kconfig:

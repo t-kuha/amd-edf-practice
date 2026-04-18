@@ -23,7 +23,7 @@ $ cd yocto
 $ source edf-init-build-env
 # now in build directory
 
-$ gen-machine-conf --template ../../src/ultra96.yaml --hw-description ../../hw_project_sdt/
+$ gen-machine-conf --template ../../src/ultra96v1.yaml --hw-description ../../hw_project_sdt/
 # now conf/local.conf is updated
 
 # build disk image
